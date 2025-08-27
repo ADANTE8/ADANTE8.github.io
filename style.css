@@ -11,7 +11,7 @@ body {
 }
 
 /* navigation menu */
-nav {
+nav { 
   background: rgb(239, 80, 41);
   margin: 0 auto;
   display: flex;
@@ -75,7 +75,6 @@ main {
 h2, h3 {
     margin: 0px;
 }
-
 /* Portfolio styles */
 .content h1 {
   color: black;
@@ -87,19 +86,19 @@ h2, h3 {
 }
 
 #portfolio li {
-  background: #08973f;
+  background: #fff;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
 #portfolio li:hover {
-  background: #791bd1;
+  background: #eee;
 }
 
 #portfolio a {
   text-decoration: none;
-  color: #f70808;
+  color: #437645;
 }
 /* responsive web design */
 @media screen and (min-width: 120px) and (max-width: 1080px) {
@@ -110,15 +109,15 @@ h2, h3 {
   }
 
   h1 {
-    font-size: 44px;
+    font-size: 36px;
   }
 
   h2 {
-    font-size: 42px;
+    font-size: 35px;
   }
 
   h3 {
-    font-size: 36px;
+    font-size: 20px;
   }
 
   #all-contents {
@@ -127,7 +126,7 @@ h2, h3 {
   }
 
   a {
-    font-size: 42px;
+    font-size: 36px;
   }
 
   .sidebar {
