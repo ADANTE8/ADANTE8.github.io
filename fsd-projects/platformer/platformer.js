@@ -27,7 +27,7 @@ $(function () {
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-    //toggleGrid();
+    toggleGrid();
 
 
     // TODO 2 - Create Platforms
@@ -50,7 +50,31 @@ $(function () {
     createCannon("top", 300, 1000);
     createCannon("left", 400, 1500);
     createCannon("right", 200, 800);
+    // Moving collectable between x=100 and x=300 at y=200
+    let movingCollectable = {
+      type: "kennedi",
+      x: 700,
+      y: 200,
+      minX: 600,
+      maxX: 900,
+      speed: 2,
+      direction: 1
+    };
+    createCollectable(movingCollectable.type, movingCollectable.x, movingCollectable.y);
 
+    // Update function to move the collectable
+    setInterval(function () {
+      // Erase previous collectable (optional, depends on your engine)
+      // Move collectable
+      movingCollectable.x += movingCollectable.speed * movingCollectable.direction;
+      if (movingCollectable.x >= movingCollectable.maxX || movingCollectable.x <= movingCollectable.minX) {
+      movingCollectable.direction *= -1;
+      }
+      // Redraw collectable at new position
+      // Remove previous and add new, or update position if your engine supports it
+      // For demonstration, just call createCollectable (may need to clear previous in your engine)
+      createCollectable(movingCollectable.type, movingCollectable.x, movingCollectable.y);
+    }, 30);
     
     
     //////////////////////////////////
